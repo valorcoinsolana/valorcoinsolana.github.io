@@ -1,97 +1,517 @@
+<!DOCTYPE html> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Valor Coin</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
-  <!-- Open Graph -->
-<meta property="og:site_name" content="Valor Coin (VALOR)" />
-<meta property="og:title" content="Valor Coin (VALOR)" />
-<meta property="og:description" content="Honoring veterans of the free world. A locked percentage is auto-donated on-chain to support US, UK, Canadian, Australian & NATO veterans." />
-<meta property="og:image" content="https://valorcoinsolana.github.io/ValorPNG.png" />
-<meta property="og:url" content="https://valorcoinsolana.github.io/" />
-<meta property="og:type" content="website" />
+<html lang="en"> 
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Valor Coin (VALOR)" />
-<meta name="twitter:description" content="On-chain charitable token supporting veterans. Transparent. Fixed supply. Real impact." />
-<meta name="twitter:image" content="https://valorcoinsolana.github.io/ValorPNG.png" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
-      max-width: 720px;
-      margin: auto;
-      padding: 40px 20px;
-      line-height: 1.6;
-    }
-    h1 { color: #00ffa3; }
-    a { color: #00ffa3; text-decoration: none; }
-    .box {
-      background: #1a1a1a;
-      padding: 16px;
-      border-radius: 8px;
-      margin: 20px 0;
-      word-break: break-all;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      opacity: 0.7;
-    }
-  </style>
-</head>
-<body>
+<head> 
 
-<img src="ValorPNG.png" 
-  alt="Valor Coin Logo" 
-  width="180" 
-  style="display:block;margin:0 auto 20px;">
+  <meta charset="UTF-8" /> 
 
-<h1>Valor Coin (VALOR)</h1>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
-<p>
-Honoring veterans of the free world. A locked percentage is auto donated on-chain to support
-UK, Canadian, Australian, US & NATO veterans. Real impact, on-chain proof from day one.
-</p>
+  <title>Valor Coin (VALOR)</title> 
 
-<h2>Contract Address</h2>
-<div class="box">
-92hwNRFB6Uv3b8uri3nPzFRNDREofcLzj2U8ZwQEfQjo
-</div>
+ 
 
-<h2>Tokenomics</h2>
-<ul>
-  <li>Chain: Solana</li>
-  <li>Total Supply: Fixed</li>
-  <li>Mintable: No</li>
-</ul>
+  <!-- Favicon --> 
 
-<h2>Links</h2>
-<ul>
-  <li>
-    <a href="https://solscan.io/token/92hwNRFB6Uv3b8uri3nPzFRNDREofcLzj2U8ZwQEfQjo" target="_blank">
-      Block Explorer (Solscan)
-    </a>
-  </li>
-  <li>
-    <a href="https://dexscreener.com/solana/aczdpcrhuzdheqjsbufs7mpvckpcqsmwg931nh2anqm" target="_blank">
-      DEX Trading Pair (Raydium)
-    </a>
-  </li>
-  <li><a href="https://twitter.com/@ValorCoinSolana" target="_blank">X (Twitter)</a></li>
-  <li><a href="https://t.me/+zyGYafdMULYyZWM8" target="_blank">Telegram</a></li>
-</ul>
+  <link rel="icon" type="image/png" href="favicon.png" /> 
 
+ 
 
-<footer>
-This is the only official website for Valor Coin. Always verify the contract address.
-</footer>
+  <!-- Open Graph --> 
 
-</body>
-</html>
+  <meta property="og:title" content="Valor Coin (VALOR)" /> 
+
+  <meta property="og:description" content="A Solana SPL token supporting veterans. Transparent tokenomics, fixed supply, on-chain proof from day one." /> 
+
+  <meta property="og:image" content="https://valorcoinsolana.github.io/ValorPNG.png" /> 
+
+  <meta property="og:url" content="https://valorcoinsolana.github.io/" /> 
+
+  <meta property="og:type" content="website" /> 
+
+ 
+
+  <!-- Twitter / X --> 
+
+  <meta name="twitter:card" content="summary_large_image" /> 
+
+  <meta name="twitter:title" content="Valor Coin (VALOR)" /> 
+
+  <meta name="twitter:description" content="A Solana SPL token supporting veterans. Transparent tokenomics, fixed supply, on-chain proof from day one." /> 
+
+  <meta name="twitter:image" content="https://valorcoinsolana.github.io/ValorPNG.png" /> 
+
+ 
+
+  <style> 
+
+    :root{ 
+
+      --bg:#0b0f14; 
+
+      --card:#101722; 
+
+      --card2:#0f1724; 
+
+      --text:#e8eef6; 
+
+      --muted:#a7b3c5; 
+
+      --accent:#00ffa3; 
+
+      --accent2:#6ee7ff; 
+
+      --border:rgba(255,255,255,.08); 
+
+      --shadow: 0 10px 30px rgba(0,0,0,.35); 
+
+      --radius:18px; 
+
+      --max: 980px; 
+
+    } 
+
+    *{box-sizing:border-box} 
+
+    body{ 
+
+      margin:0; 
+
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; 
+
+      background: 
+
+        radial-gradient(900px 500px at 20% -10%, rgba(0,255,163,.15), transparent 50%), 
+
+        radial-gradient(900px 500px at 100% 0%, rgba(110,231,255,.12), transparent 50%), 
+
+        var(--bg); 
+
+      color:var(--text); 
+
+      line-height:1.55; 
+
+    } 
+
+    a{color:inherit; text-decoration:none} 
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 60px;} 
+
+    .topbar{ 
+
+      display:flex; align-items:center; justify-content:space-between; 
+
+      gap:12px; padding:14px 16px; border:1px solid var(--border); 
+
+      border-radius:var(--radius); background:rgba(16,23,34,.65); 
+
+      backdrop-filter: blur(10px); 
+
+    } 
+
+    .brand{display:flex; align-items:center; gap:12px;} 
+
+    .brand img{width:34px; height:34px; border-radius:10px; box-shadow: var(--shadow);} 
+
+    .brand .t{font-weight:800; letter-spacing:.2px;} 
+
+    .pill{ 
+
+      font-size:12px; padding:6px 10px; border-radius:999px; 
+
+      border:1px solid var(--border); color:var(--muted); 
+
+      background: rgba(0,0,0,.18); 
+
+    } 
+
+ 
+
+    .hero{ 
+
+      margin-top:18px; 
+
+      display:grid; gap:16px; 
+
+      grid-template-columns: 1.2fr .8fr; 
+
+    } 
+
+    @media(max-width:900px){ .hero{grid-template-columns:1fr;} } 
+
+ 
+
+    .card{ 
+
+      border:1px solid var(--border); 
+
+      background: linear-gradient(180deg, rgba(16,23,34,.8), rgba(16,23,34,.55)); 
+
+      border-radius:var(--radius); 
+
+      box-shadow: var(--shadow); 
+
+      padding:20px; 
+
+    } 
+
+    h1{margin:0 0 10px; font-size:40px; line-height:1.1;} 
+
+    @media(max-width:520px){ h1{font-size:32px;} } 
+
+ 
+
+    .sub{color:var(--muted); margin:0 0 16px; font-size:15px;} 
+
+    .ctaRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;} 
+
+    .btn{ 
+
+      display:inline-flex; align-items:center; justify-content:center; 
+
+      gap:8px; padding:11px 14px; border-radius:14px; 
+
+      border:1px solid var(--border); background: rgba(0,0,0,.2); 
+
+      font-weight:700; font-size:14px; 
+
+      transition: transform .08s ease, border-color .15s ease; 
+
+    } 
+
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.18);} 
+
+    .btn.primary{ 
+
+      background: linear-gradient(135deg, rgba(0,255,163,.20), rgba(110,231,255,.16)); 
+
+      border-color: rgba(0,255,163,.35); 
+
+    } 
+
+    .btn.ghost{color:var(--text);} 
+
+ 
+
+    .kv{ 
+
+      display:grid; gap:10px; 
+
+    } 
+
+    .kv .row{ 
+
+      display:flex; justify-content:space-between; gap:10px; 
+
+      padding:10px 12px; border:1px solid var(--border); 
+
+      border-radius:14px; background: rgba(0,0,0,.18); 
+
+    } 
+
+    .k{color:var(--muted); font-size:13px;} 
+
+    .v{font-weight:800;} 
+
+    .addr{ 
+
+      margin-top:12px; 
+
+      padding:12px; border-radius:14px; 
+
+      border:1px solid var(--border); 
+
+      background: rgba(0,0,0,.18); 
+
+      overflow:hidden; 
+
+    } 
+
+    .addrTop{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:8px;} 
+
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;} 
+
+    .copy{ 
+
+      cursor:pointer; 
+
+      padding:8px 10px; border-radius:12px; 
+
+      border:1px solid var(--border); 
+
+      background: rgba(255,255,255,.06); 
+
+      font-weight:800; font-size:12px; 
+
+    } 
+
+    .copy:hover{border-color: rgba(255,255,255,.18);} 
+
+ 
+
+    .grid3{display:grid; gap:16px; grid-template-columns: repeat(3, 1fr); margin-top:16px;} 
+
+    @media(max-width:900px){ .grid3{grid-template-columns:1fr;} } 
+
+ 
+
+    .sectionTitle{margin:26px 0 10px; font-size:18px; color:var(--text); letter-spacing:.2px;} 
+
+    .muted{color:var(--muted);} 
+
+    ul{margin:10px 0 0 18px; color:var(--muted);} 
+
+    li{margin:6px 0;} 
+
+    .foot{ 
+
+      margin-top:28px; color:var(--muted); font-size:12px; opacity:.9; 
+
+      display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; 
+
+      border-top:1px solid var(--border); padding-top:16px; 
+
+    } 
+
+    .tag{ 
+
+      display:inline-flex; gap:8px; align-items:center; 
+
+      padding:6px 10px; border-radius:999px; 
+
+      background: rgba(0,0,0,.18); 
+
+      border:1px solid var(--border); 
+
+      color:var(--muted); font-size:12px; 
+
+    } 
+
+  </style> 
+
+</head> 
+
+<body> 
+
+  <div class="wrap"> 
+
+    <div class="topbar"> 
+
+      <div class="brand"> 
+
+        <img src="ValorPNG.png" alt="VALOR logo" /> 
+
+        <div> 
+
+          <div class="t">Valor Coin <span class="muted">(VALOR)</span></div> 
+
+          <div class="muted" style="font-size:12px;">Solana SPL • Fixed supply • On-chain proof</div> 
+
+        </div> 
+
+      </div> 
+
+      <div class="pill">Official site</div> 
+
+    </div> 
+
+ 
+
+    <div class="hero"> 
+
+      <div class="card"> 
+
+        <h1>Honoring veterans with on-chain, verifiable impact.</h1> 
+
+        <p class="sub"> 
+
+          VALOR is a Solana SPL token with a transparent charitable allocation. A portion of supply is programmatically 
+
+          locked for long-term charitable distribution, with everything verifiable on-chain from day one. 
+
+        </p> 
+
+ 
+
+        <div class="ctaRow"> 
+
+          <!-- Replace these links with YOUR real URLs --> 
+
+          <a class="btn primary" href="https://dexscreener.com/solana/aczdpcrhuzdheqjsbufs7mpvkckpcqsmwg931nh2anqm" target="_blank" rel="noreferrer">View Chart (Dexscreener)</a> 
+
+          <a class="btn" href="https://solscan.io/token/92hwNRFB6Uv3b8uri3nPzFRNDREofcLzj2U8ZwQEfQjo" target="_blank" rel="noreferrer">Solscan</a> 
+
+          <a class="btn" href="https://raydium.io/" target="_blank" rel="noreferrer">Buy on Raydium</a> 
+
+          <a class="btn ghost" href="https://x.com/ValorCoinSolana" target="_blank" rel="noreferrer">X (Twitter)</a> 
+
+          <a class="btn ghost" href="https://t.me/valorcoinsolana" target="_blank" rel="noreferrer">Telegram</a> 
+
+        </div> 
+
+ 
+
+        <div class="sectionTitle">Contract (Mint) Address</div> 
+
+        <div class="addr"> 
+
+          <div class="addrTop"> 
+
+            <div class="tag mono">SOL • Token-2022</div> 
+
+            <div class="copy" onclick="copyAddr()">Copy</div> 
+
+          </div> 
+
+          <div id="mint" class="mono" style="font-size:13px; color:#d9e6f6;"> 
+
+            92hwNRFB6Uv3b8uri3nPzFRNDREofcLzj2U8ZwQEfQjo 
+
+          </div> 
+
+        </div> 
+
+      </div> 
+
+ 
+
+      <div class="card"> 
+
+        <div class="sectionTitle" style="margin-top:0;">Key Stats</div> 
+
+        <div class="kv"> 
+
+          <!-- Update these values if you want --> 
+
+          <div class="row"><div class="k">Chain</div><div class="v">Solana</div></div> 
+
+          <div class="row"><div class="k">Total Supply</div><div class="v">999,895,755.7117</div></div> 
+
+          <div class="row"><div class="k">Symbol</div><div class="v">VALOR</div></div> 
+
+          <div class="row"><div class="k">Supply Type</div><div class="v">Fixed</div></div> 
+
+        </div> 
+
+ 
+
+        <div class="sectionTitle">Proof & Trust</div> 
+
+        <ul> 
+
+          <li>Verifiable token & transfers on Solscan</li> 
+
+          <li>Liquidity on Raydium (SOL/VALOR pair)</li> 
+
+          <li>Charity allocation locked with on-chain vesting</li> 
+
+        </ul> 
+
+ 
+
+        <div class="sectionTitle">What is VALOR?</div> 
+
+        <p class="muted" style="margin:8px 0 0;"> 
+
+          A community token focused on measurable, transparent contributions—no vague promises. If it isn’t verifiable 
+
+          on-chain, it doesn’t count. 
+
+        </p> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="grid3"> 
+
+      <div class="card"> 
+
+        <div class="sectionTitle" style="margin-top:0;">How it works</div> 
+
+        <p class="muted"> 
+
+          A defined portion is reserved for charitable distribution via a transparent schedule. Holders can independently 
+
+          verify supply, vesting, and transfers using public explorers. 
+
+        </p> 
+
+      </div> 
+
+ 
+
+      <div class="card"> 
+
+        <div class="sectionTitle" style="margin-top:0;">Verification</div> 
+
+        <p class="muted"> 
+
+          Use Solscan for mint details, holders, and transfers. Use Dexscreener for price, liquidity, and volume. 
+
+        </p> 
+
+      </div> 
+
+ 
+
+      <div class="card"> 
+
+        <div class="sectionTitle" style="margin-top:0;">Community</div> 
+
+        <p class="muted"> 
+
+          Follow updates on X and join Telegram for announcements, milestones, and proof posts. 
+
+        </p> 
+
+      </div> 
+
+    </div> 
+
+ 
+
+    <div class="foot"> 
+
+      <div>© <span id="y"></span> Valor Coin (VALOR)</div> 
+
+      <div class="muted">Tip: share this link for clean previews on X: <span class="mono">/?v=3</span></div> 
+
+    </div> 
+
+  </div> 
+
+ 
+
+  <script> 
+
+    document.getElementById("y").textContent = new Date().getFullYear(); 
+
+ 
+
+    function copyAddr(){ 
+
+      const mint = document.getElementById("mint").textContent.trim(); 
+
+      navigator.clipboard.writeText(mint).then(()=>{ 
+
+        const btn = document.querySelector(".copy"); 
+
+        const old = btn.textContent; 
+
+        btn.textContent = "Copied!"; 
+
+        setTimeout(()=> btn.textContent = old, 1200); 
+
+      }); 
+
+    } 
+
+  </script> 
+
+</body> 
+
+</html> 
